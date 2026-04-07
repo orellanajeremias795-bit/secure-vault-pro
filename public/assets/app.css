@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap');
+
+:root {
+  --bg1: #f8fbff;
+  --bg2: #f6f2eb;
+  --ink: #1a2a3a;
+  --muted: #5a6673;
+  --primary: #0f766e;
+  --primary-2: #0b4f8a;
+  --danger: #b42318;
+  --card: #ffffff;
+  --line: #d8e3ee;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 10% 10%, #d7f0ff 0, transparent 35%),
+    radial-gradient(circle at 90% 5%, #ffe8c8 0, transparent 30%),
+    linear-gradient(180deg, var(--bg1), var(--bg2));
+  min-height: 100vh;
+  padding: 24px;
+}
+
+.auth-body { display:flex; justify-content:center; align-items:center; }
+.auth-card {
+  width: min(520px, 92vw);
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 22px;
+  box-shadow: 0 10px 32px rgba(31, 73, 125, .14);
+}
+
+h1 { margin: 0 0 10px; font-size: clamp(28px, 3vw, 38px); }
+h3 { margin: 0 0 12px; font-size: 24px; }
+label { display:block; margin-top: 10px; font-weight: 600; }
+
+input, select {
+  width: 100%;
+  border: 1px solid #b9c8d8;
+  border-radius: 10px;
+  padding: 11px 12px;
+  margin-top: 6px;
+  background: #fff;
+}
+
+.topbar {
+  display:flex; justify-content:space-between; gap:16px; align-items:center;
+  background: #ffffffcc; backdrop-filter: blur(4px);
+  border:1px solid var(--line); border-radius: 16px; padding: 16px 18px;
+  box-shadow: 0 8px 28px rgba(40, 90, 130, .10);
+}
+.top-actions { display:flex; gap:8px; flex-wrap:wrap; }
+
+.btn {
+  display:inline-flex; align-items:center; justify-content:center;
+  border:1px solid #9db4c8; background:#fff; color:#183045;
+  border-radius: 10px; padding: 9px 12px; text-decoration:none; cursor:pointer;
+}
+.btn:hover { filter: brightness(0.98); }
+.btn-primary { background: linear-gradient(90deg,var(--primary),var(--primary-2)); color:#fff; border:none; }
+.btn-danger { background: #fff0ef; color: var(--danger); border-color:#efb8b5; }
+.btn-mini { padding:6px 9px; border-radius: 8px; font-size: 13px; }
+
+.grid { display:grid; gap:16px; }
+.grid.two { grid-template-columns: 1fr 1fr; margin-top:16px; }
+.card {
+  background: var(--card);
+  border:1px solid var(--line);
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 10px 28px rgba(44, 75, 110, .09);
+}
+
+.muted { color: var(--muted); font-size: 14px; }
+.tip { margin-top: 12px; font-size: 14px; color:#2f4f6f; background:#eef7ff; padding:10px; border-radius:10px; }
+.flash { margin-top: 14px; padding: 10px 12px; border-radius: 10px; }
+.flash.success { background:#e9fff1; color:#0c6d38; border:1px solid #ade8c4; }
+.flash.error { background:#fff1f0; color:#931f15; border:1px solid #f3b7b3; }
+
+.check { display:flex; gap:8px; align-items:center; margin-top: 10px; }
+.check input { width:auto; margin:0; }
+
+.inline-form { display:flex; gap:8px; align-items:center; flex-wrap: wrap; }
+.inline-form input[type='text'] { flex: 1; min-width: 180px; }
+
+.stat-grid {
+  margin-top: 10px;
+  display:grid; grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+.stat-grid div {
+  background: #f5fbff;
+  border: 1px solid #d8eaf6;
+  border-radius: 12px;
+  padding: 10px;
+}
+.stat-grid small { display:block; color:#5b6e80; }
+.stat-grid strong { font-size: 18px; }
+.ok { color:#0d7a41; }
+.warn { color:#9a5a00; }
+
+.bars { display:flex; gap:10px; align-items:flex-end; min-height: 120px; overflow:auto; }
+.bar-item { text-align:center; min-width: 54px; }
+.bar {
+  width: 34px; margin:0 auto 6px;
+  background: linear-gradient(180deg, #1890ff, #0d766e);
+  border-radius: 8px 8px 2px 2px;
+}
+.bar-item span { font-size: 12px; color:#415c72; }
+
+table { width:100%; border-collapse: collapse; }
+th, td { border-bottom:1px solid #ecf1f6; padding: 9px; text-align:left; vertical-align: top; }
+th { color:#38566f; font-size:13px; text-transform: uppercase; letter-spacing: .02em; }
+code { font-size:12px; color:#334960; }
+
+@media (max-width: 980px) {
+  .grid.two { grid-template-columns: 1fr; }
+  .stat-grid { grid-template-columns: repeat(2, 1fr); }
+}
